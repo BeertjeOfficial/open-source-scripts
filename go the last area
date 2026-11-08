@@ -1,0 +1,14 @@
+local targetCFrame = CFrame.new(
+	31.405391693, 3.020347357, 6126.672851562,
+	-0.212393537, -0.000000019, 0.977184236,
+	-0.000000026, 1.000000000, 0.000000014,
+	-0.977184236, -0.000000022, -0.212393537
+)
+
+
+local plrs = game:GetService("Players")
+local plr = plrs.LocalPlayer
+
+local root = plr.Character.HumanoidRootPart 
+
+root.CFrame = targetCFrame
