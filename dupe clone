@@ -1,0 +1,10 @@
+local br = game:GetService("Players").LocalPlayer.Backpack["Brr Brr Patapim"]
+
+local plrs = game:GetService("Players")
+
+local plr = plrs.LocalPlayer
+
+local clonedbr = br:Clone()
+
+clonedbr.Parent = plr.Backpack
+
