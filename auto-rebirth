@@ -1,0 +1,6 @@
+local rebirthEvent = game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("RequestRebirth")
+
+while true do
+    rebirthEvent:FireServer()
+    task.wait(1) -- Adjust the delay (in seconds) as needed
+end
