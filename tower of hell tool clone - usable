@@ -1,0 +1,34 @@
+-- game : roblox.com/games/1962086868/Tower-of-Hell
+
+
+-- replace local fusion = gearfolder:FindFirstChild("fusion") fusion with any of the lsited tools yxterminator, banana, bomb, cola, fishingrod, fusion, gravity, hook, hourglass, speed, killpart, jump, trowel
+local plrs = game:GetService("Players")
+local plr = plrs.LocalPlayer
+local char = plr.Character or plr.CharacterAdded:Wait()
+local root = char:WaitForChild("HumanoidRootPart")
+local rps = game:GetService("ReplicatedStorage")
+local gearfolder = rps.Assets.Gear
+
+if gearfolder then 
+print("Found gear folder")
+
+for _, gear in pairs(gearfolder:GetChildren()) do 
+print("gear found" .. gear.Name)
+
+end
+local fusion = gearfolder:FindFirstChild("fusion")
+
+if fusion then
+print("found fusion")
+
+local clonedf = fusion:Clone()
+clonedf.Parent = plr.Backpack
+else
+print("no fusion found") 
+end
+
+else 
+warn("No gear found")
+end
+
+
